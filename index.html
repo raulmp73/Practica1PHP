@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 1 · PHP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+    <header><p>DESARROLLO WEB EN ENTORNO SERVIDOR</p><h1>Práctica 1 · PHP</h1><p>Completa un formulario para guardar el registro y consultar su JSON.</p></header>
+    <div class="forms">
+    <section>
+        <h2>Alta de usuario</h2>
+        <form method="post" action="ws/crearUsuario.php">
+            <label>Nombre<input name="nombre" autocomplete="given-name" required maxlength="100"></label>
+            <label>Apellidos<input name="apellidos" autocomplete="family-name" required maxlength="150"></label>
+            <label>Contraseña<input type="password" name="contrasena" autocomplete="new-password" minlength="8" maxlength="72" required></label>
+            <label>Teléfono<input type="tel" name="telefono" autocomplete="tel" required maxlength="20"></label>
+            <label>Email<input type="email" name="email" autocomplete="email" required></label>
+            <fieldset><legend>Sexo</legend>
+                <label><input type="radio" name="sexo" value="hombre" required> Hombre</label>
+                <label><input type="radio" name="sexo" value="mujer"> Mujer</label>
+                <label><input type="radio" name="sexo" value="otro"> Otro</label>
+            </fieldset>
+            <button type="submit">Crear usuario</button>
+        </form>
+    </section>
+    <section>
+        <h2>Alta de elemento · MONFAB</h2>
+        <form method="post" action="ws/createElement.php">
+            <label>Nombre<input name="nombre" required maxlength="150"></label>
+            <label>Descripción<textarea name="descripcion" rows="4" required maxlength="5000"></textarea></label>
+            <label>Categoría<input name="categoria" required maxlength="100"></label>
+            <label>Cantidad<input type="number" name="cantidad" min="1" step="1" required></label>
+            <button type="submit">Crear elemento</button>
+        </form>
+    </section>
+    </div>
+</main>
+</body>
+</html>
